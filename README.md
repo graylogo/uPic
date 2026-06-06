@@ -1,4 +1,4 @@
-<div align="right"><strong><a href="./README-cn.md">🇨🇳中文</a></strong>  | <strong>🇬🇧English</strong></div>
+<div align="right"><strong>🇨🇳中文</strong>  | <strong><a href="./README-en.md">🇬🇧English</a></strong></div>
 <div align="center">
   <img src="https://raw.githubusercontent.com/gee1k/oss/master/screenshot/uPic/logo.png" alt="uPic">
   <br>
@@ -9,168 +9,171 @@
 
   <p>
 
-  [![Travis Build Status](https://img.shields.io/travis/gee1k/uPic.svg?style=flat-square&logo=Travis)](https://travis-ci.org/gee1k/uPic)  [![MIT](https://img.shields.io/github/license/gee1k/uPic?style=flat-square)](https://github.com/gee1k/uPic/blob/master/LICENSE)
+  [![Travis Build Status](https://img.shields.io/travis/gee1k/uPic.svg?style=flat-square&logo=Travis)](https://travis-ci.org/gee1k/uPic) [![MIT](https://img.shields.io/github/license/gee1k/uPic?style=flat-square)](https://github.com/gee1k/uPic/blob/master/LICENSE)
 
-[![Donate on PayPal](https://img.shields.io/badge/support-PayPal-blue?style=flat-square&logo=PayPal)](https://paypal.me/geeee1k) [![Chat on Telegram](https://img.shields.io/badge/chat-Telegram-blueviolet?style=flat-square&logo=Telegram)](https://t.me/upic_host) [![Follow My Twitter](https://img.shields.io/badge/follow-Tweet-blue?style=flat-square&logo=Twitter)](https://twitter.com/realSvend) [![Follow My Weibo](https://img.shields.io/badge/follow-Weibo-red?style=flat-square&logo=sina-weibo)](https://weibo.com/6436660358)
+[![Donate on PayPal](https://img.shields.io/badge/support-PayPal-blue?style=flat-square&logo=PayPal)](https://paypal.me/geeee1k) [![Chat on Telegram](https://img.shields.io/badge/chat-Telegram-blueviolet?style=flat-square&logo=Telegram)](https://t.me/upic_host) [![Follow My Twitter](https://img.shields.io/badge/follow-Tweet-blue?style=flat-square&logo=Twitter)](https://twitter.com/realSvend) [![Follow My Twitter](https://img.shields.io/badge/follow-Weibo-red?style=flat-square&logo=sina-weibo)](https://weibo.com/643660358)
 
   </p>
 </div>
 
 ---
 
-## 🔧 Fork Version Info
+## 🔧 Fork 版本说明
 
-> ⚠️ **This is graylogo's Fork version, specifically adapted for macOS 26 and Xcode 26**
+> ⚠️ **此为 graylogo 的 Fork 版本，专门适配 macOS 26 和 Xcode 26**
 
-### ✨ This Version Updates
+### ✨ 本版本更新内容
 
 **v1.4.8-macOS26** (2024-06-06)
 
-#### Core Compatibility Upgrades
+#### 核心兼容性升级
 
-1. **WCDB Database Upgrade**
-   - Upgraded WCDB from 2.1.9 to **2.1.16**
-   - Fixed Swift 6 compilation compatibility issues
-   - Fixed C++ standard library specialization errors
+1. **WCDB 数据库升级**
+   - 升级 WCDB 从 2.1.9 到 **2.1.16**
+   - 修复 Swift 6 编译兼容性问题
+   - 修复 C++ 标准库的特殊化错误
 
-2. **Removed Incompatible libminipng Framework**
-   - Removed pre-compiled libminipng.framework (incompatible with Swift 6)
-   - Switched to macOS native `NSBitmapImageRep` for PNG image compression
-   - Maintained original image compression functionality
+2. **移除不兼容的 libminipng 框架**
+   - 移除预编译的 libminipng.framework（与 Swift 6 不兼容）
+   - 改用 macOS 原生 `NSBitmapImageRep` 进行 PNG 图片压缩
+   - 保持原有的图片压缩功能不变
 
-3. **Xcode 26 Adaptation**
-   - Updated entitlements file configuration
-   - Minimum system requirement raised to **macOS 13**
-   - Optimized Swift 6 compilation settings
+3. **Xcode 26 适配**
+   - 更新 entitlements 文件配置
+   - 最低系统要求提升至 **macOS 13**
+   - 优化 Swift 6 编译设置
 
-#### 🔄 Difference from Upstream
+#### 🔄 与上游版本差异
 
-- Based on latest code after author's v0.21.1
-- Includes all author's feature updates
-- Focused on macOS 26/Xcode 26 compatibility fixes
+- 基于原作者 v0.21.1 之后的最新代码
+- 包含原作者的所有功能更新
+- 专注于 macOS 26/Xcode 26 兼容性修复
 
-#### ⚠️ System Requirements
+#### ⚠️ 系统要求
 
-- **Minimum**: macOS 13 (Ventura) or higher
-- **Recommended**: macOS 14 (Sonoma) or macOS 26
-- **Xcode**: Xcode 15+ (Xcode 26 recommended)
+- **最低**: macOS 13 (Ventura) 或更高版本
+- **推荐**: macOS 14 (Sonoma) 或 macOS 26
+- **Xcode**: Xcode 15+ (推荐 Xcode 26)
 
-#### 📥 Installation
+#### 📥 安装方式
 
-**Method 1: Compile and Install**
+**方式一：编译安装**
 ```bash
-# Clone this repository
+# 克隆此仓库
 git clone https://github.com/graylogo/uPic.git
 cd uPic
 
-# Compile Release version
+# 编译 Release 版本
 xcodebuild -project uPic.xcodeproj -scheme "uPic(Release)" -configuration Release build
 
-# App will be generated at
+# 应用将生成在
 # ./build/Build/Products/Release/uPic.app
 ```
 
-**Method 2: Command Line Install**
+**方式二：命令行安装**
 ```bash
-# After compilation, copy to Applications folder
+# 编译后复制到应用程序文件夹
 cp -R ./build/Build/Products/Release/uPic.app /Applications/
 
-# Launch app
+# 启动应用
 open -a uPic
 ```
 
-#### 🔄 Keeping in Sync with Upstream
+#### 🔄 保持与上游同步
 
-This Fork will periodically sync updates from the author's repository:
+此 Fork 会定期从原作者仓库同步更新：
 
 ```bash
-# Add upstream repository (if not already done)
+# 添加上游仓库（如果还没有）
 git remote add upstream https://github.com/gee1k/uPic.git
 
-# Sync upstream updates
+# 同步上游更新
 git fetch upstream
 git merge upstream/master
 git push origin master
 ```
 
-#### 📚 Related Resources
+#### 📚 相关资源
 
-- **Author's Repository**: [gee1k/uPic](https://github.com/gee1k/uPic)
-- **This Fork**: [graylogo/uPic](https://github.com/graylogo/uPic)
-- **Detailed Usage Guide**: [FORK_GUIDE.md](./FORK_GUIDE.md)
+- **原作者仓库**: [gee1k/uPic](https://github.com/gee1k/uPic)
+- **此 Fork 仓库**: [graylogo/uPic](https://github.com/graylogo/uPic)
+- **详细使用指南**: [FORK_GUIDE.md](./FORK_GUIDE.md)
 
 ---
 
-**👬Chat: _[Telegram](https://t.me/upic_host), [Twitter](https://twitter.com/realSvend), [Weibo](https://weibo.com/6436660358)_**
+**👬联系： _[Telegram](https://t.me/upic_host), [Twitter](https://twitter.com/realSvend), [微博](https://weibo.com/643660358)_**
 
-**☕️Donate: _[Paypal](https://paypal.me/geeee1k), [Alipay](https://raw.githubusercontent.com/gee1k/oss/master/qrcode/alipay.JPG), [WechatPay](https://raw.githubusercontent.com/gee1k/oss/master/qrcode/wechat_pay.JPG)_**
+**☕️赞助： _[Paypal](https://paypal.me/geeee1k), [支付宝](https://raw.githubusercontent.com/gee1k/oss/master/qrcode/alipay.JPG), [微信支付](https://raw.githubusercontent.com/gee1k/oss/master/qrcode/wechat_pay.JPG)_**
 
 **📱uPic for iOS: [![uPic for iOS](https://cdn.jsdelivr.net/gh/gee1k/oss@master/uPic/app-store-black.svg)](https://apps.apple.com/us/app/id1510718678)**
 
-## 📑 Introduction
+## 📑 简介
 
-> **uPic(upload Picture) is a image(file) hosting client for Mac.** 
+> **uPic(upload Picture) 是一款 Mac 端的图床(文件)上传客户端**
 
-**💡 Tips：** They can automatic uploading local file and screenshot, meanwhile the menu bar shows the uploading progress constantly. File's link will automatically copied to the clipboard when finish upload, make you insert pictures quickly when you are blogging or chatting. Link’s format can be a normal URL, HTML or Markdown, it's totally up to you.
+**💡 特点：** 无论是本地文件、或者屏幕截图都可自动上传，菜单栏显示实时上传进度。上传完成后文件链接自动复制到剪切板，让你无论是在写博客、灌水聊天都能快速插入图片。
+连接格式可以是普通 URL、HTML 或者 Markdown，仍由你掌控。
 
-**🔋 Support image hosting：**[smms](https://sm.ms/), [UPYUN USS](https://www.upyun.com/products/file-storage), [qiniu KODO](https://www.qiniu.com/products/kodo), [Aliyun OSS](https://www.aliyun.com/product/oss/), [TencentCloud COS](https://cloud.tencent.com/product/cos), [BaiduCloud BOS](https://cloud.baidu.com/product/bos.html), [Weibo](https://weibo.com/), [Github](https://github.com/settings/tokens), [Gitee](https://gitee.com/profile/personal_access_tokens), [Amazon S3](https://aws.amazon.com/cn/s3/), [Imgur](https://imgur.com/), [custom upload api](https://blog.svend.cc/upic/tutorials/custom), ...
+**🔋 支持图床：** [smms](https://sm.ms/)、 [又拍云 USS](https://www.upyun.com/products/file-storage)、[七牛云 KODO](https://www.qiniu.com/products/kodo)、 [阿里云 OSS](https://www.aliyun.com/product/oss/)、 [腾讯云 COS](https://cloud.tencent.com/product/cos)、 [百度云 BOS](https://cloud.baidu.com/product/bos.html)、[微博](https://weibo.com/)、[Github](https://github.com/settings/tokens)、 [Gitee](https://gitee.com/profile/personal_access_tokens)、 [Amazon S3](https://aws.amazon.com/cn/s3/)、[Imgur](https://imgur.com/)、[自定义上传接口](https://blog.svend.cc/upic/tutorials/custom)、...
 
-## 🚀 How to install
+## 🚀 如何安装
 
+### 下载安装
+#### 1.AppStore(推荐):
 
-### 1. AppStore(Recommend):
-
-> Only AppStore is the latest version. Other installations stay at `v0.21.1'.and you can pull the code to compile and package by yourself.
+> 只有 AppStore 才是最新的版本。其他方式安装的停留在 `v0.21.1`，可以自行拉取代码编译打包。
 
  [![uPic for macOS](https://cdn.jsdelivr.net/gh/gee1k/oss@master/uPic/app-store-black.svg)](https://apps.apple.com/cn/app/id1549159979)
 
 
-### 2.Homebrew
+#### 2.Homebrew
 ```bash
 brew install bigwig-club/brew/upic --cask
 ```
 
-### 3. Download from github
- Click [release](https://github.com/gee1k/uPic/releases) to download.
 
- **If you have difficulty accessing Github in mainland China, you can download it from [Gitee release](https://gitee.com/gee1k/uPic/releases).**
+#### 3.手动
+从 [Github release](https://github.com/gee1k/uPic/releases) 下载。
 
-### Check System Share Permission
+**如果在国内访问 Github 下载困难的，可以从[Gitee release](https://gitee.com/gee1k/uPic/releases)下载。**
 
-- 1. Run uPic
+### 检查系统分享权限
 
-- 2. Make sure the app has Full Disk Access permission, which can be authorized in `Preferences` - `Advanced`
+- 1.打开 uPic
+
+- 2.确保应用有完全磁盘访问权限，可在`偏好设置` - `高级` 中授权
 
   <center>
-    <img src="https://cdn.jsdelivr.net/gh/gee1k/oss@master/screenshot/uPic-en/full-disk-access.png" height="300">
+    <img src="https://cdn.jsdelivr.net/gh/gee1k/oss@master/screenshot/uPic-cn/full-disk-access.png" height="300">
   </center>
 
+## 🕹 使用方式
 
 
-## 🕹 How to use it
-
-| Upload method | Description | Preview |
-| ------------- | ----------- | ------- |
-| **🖥 Select files** |  Select the file to upload from `Finder`.  `Can set global shortcuts`  | ![](https://cdn.jsdelivr.net/gh/gee1k/oss@master/screenshot/uPic-en/selectFile.gif) |
-| **⌨️ Copy file upload** | Upload a file that has been copied to the clipboard.  `Can set global shortcuts` | ![](https://cdn.jsdelivr.net/gh/gee1k/oss@master/screenshot/uPic-en/pasteboard.gif) |
-| **📸 Screenshot upload** | Directly pull frame screenshot upload.  `Can set global shortcuts` | ![](https://cdn.jsdelivr.net/gh/gee1k/oss@master/screenshot/uPic-en/screenshot.gif) |
-| **🖱 Drag and drop local file upload** | Drag and drop files to the status bar to upload | ![](https://cdn.jsdelivr.net/gh/gee1k/oss@master/screenshot/uPic-en/dragFile.gif) |
-| **🖱 Drag and drop browser image upload** | Drag image from browser to status bar to upload | ![](https://cdn.jsdelivr.net/gh/gee1k/oss@master/screenshot/uPic-en/dragFromBrowser.gif) |
-| **📂 Share Extension upload** | Right click on file and share to uPic | ![](https://cdn.jsdelivr.net/gh/gee1k/oss@master/screenshot/uPic-en/share.gif) |
-| **⌨️ Command line upload** | Invoke uPic to upload files by executing commands | ![](https://cdn.jsdelivr.net/gh/gee1k/oss@master/screenshot/uPic-en/cli.gif) |
-
-## 🧰 More features
-
-### 1. Global shortcut key
-<img src="https://cdn.jsdelivr.net/gh/gee1k/oss@master/screenshot/uPic-en/shortcuts.png" height="300">
-
-### 2. Upload history
-<img src="https://cdn.jsdelivr.net/gh/gee1k/oss@master/screenshot/uPic-en/history.png" height="300">
+| 功能 | 描述 | 预览 |
+| --- | --- | --- |
+| **🖥 选择文件上传** | 从`Finder`选择文件上传。`可设置全局快捷键` | ![](https://cdn.jsdelivr.net/gh/gee1k/oss@master/screenshot/uPic-cn/selectFile.gif) |
+| **⌨️ 复制文件上传** | 上传已拷贝到剪切板的文件。`可设置全局快捷键` | ![](https://cdn.jsdelivr.net/gh/gee1k/oss@master/screenshot/uPic-cn/pasteboard.gif) |
+| **📸 截图上传** | 直接拉框截图上传。`可设置全局快捷键` | ![](https://cdn.jsdelivr.net/gh/gee1k/oss@master/screenshot/uPic-cn/screenshot.gif) |
+| **🖱 拖拽本地文件上传** | 拖拽文件到状态栏上传 | ![](https://cdn.jsdelivr.net/gh/gee1k/oss@master/screenshot/uPic-cn/dragFile.gif) |
+| **🖱 拖拽浏览器图片上传** | 从浏览器拖拽图片到状态栏上传 | ![](https://cdn.jsdelivr.net/gh/gee1k/oss@master/screenshot/uPic-cn/dragFromBrowser.gif) |
+| **📂 系统分享上传** | 右击文件选择分享到uPic上传 | ![](https://cdn.jsdelivr.net/gh/gee1k/oss@master/screenshot/uPic-cn/share.gif) |
+| **⌨️ 命令行上传** | 通过执行命令调用 uPic 上传文件 | ![](https://cdn.jsdelivr.net/gh/gee1k/oss@master/screenshot/uPic-cn/cli.gif) |
 
 
-## Software recommendation
+## 🧰 更多功能
 
-- [Bob:The most powerful translation and OCR software on macOS](https://github.com/ripperhe/Bob)
+### 1.全局快捷键
+<img src="https://cdn.jsdelivr.net/gh/gee1k/oss@master/screenshot/uPic-cn/shortcuts.png" height="300">
+
+### 2. 上传历史
+<img src="https://cdn.jsdelivr.net/gh/gee1k/oss@master/screenshot/uPic-cn/history.png" height="300">
+
+## 优秀软件推荐
+
+- [Bob:macOS 平台上最强的翻译和 OCR 软件](https://github.com/ripperhe/Bob)
+
+
 
 ## ✨ Contributors
 
