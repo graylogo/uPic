@@ -4,7 +4,7 @@
   <br>
   <br>
   <p>
-    Picture and file upload tool for macOS. - A native, powerful, beautiful and simple  
+    Picture and file upload tool for macOS. - A native, powerful, beautiful and simple
   </p>
 
   <p>
@@ -16,7 +16,90 @@
   </p>
 </div>
 
------
+---
+
+## 🔧 Fork 版本说明
+
+> ⚠️ **此为 graylogo 的 Fork 版本，专门适配 macOS 26 和 Xcode 26**
+
+### ✨ 本版本更新内容
+
+**v1.4.8-macOS26** (2024-06-06)
+
+#### 核心兼容性升级
+
+1. **WCDB 数据库升级**
+   - 升级 WCDB 从 2.1.9 到 **2.1.16**
+   - 修复 Swift 6 编译兼容性问题
+   - 修复 C++ 标准库的特殊化错误
+
+2. **移除不兼容的 libminipng 框架**
+   - 移除预编译的 libminipng.framework（与 Swift 6 不兼容）
+   - 改用 macOS 原生 `NSBitmapImageRep` 进行 PNG 图片压缩
+   - 保持原有的图片压缩功能不变
+
+3. **Xcode 26 适配**
+   - 更新 entitlements 文件配置
+   - 最低系统要求提升至 **macOS 13**
+   - 优化 Swift 6 编译设置
+
+#### 🔄 与上游版本差异
+
+- 基于原作者 v0.21.1 之后的最新代码
+- 包含原作者的所有功能更新
+- 专注于 macOS 26/Xcode 26 兼容性修复
+
+#### ⚠️ 系统要求
+
+- **最低**: macOS 13 (Ventura) 或更高版本
+- **推荐**: macOS 14 (Sonoma) 或 macOS 26
+- **Xcode**: Xcode 15+ (推荐 Xcode 26)
+
+#### 📥 安装方式
+
+**方式一：编译安装**
+```bash
+# 克隆此仓库
+git clone https://github.com/graylogo/uPic.git
+cd uPic
+
+# 编译 Release 版本
+xcodebuild -project uPic.xcodeproj -scheme "uPic(Release)" -configuration Release build
+
+# 应用将生成在
+# ./build/Build/Products/Release/uPic.app
+```
+
+**方式二：命令行安装**
+```bash
+# 编译后复制到应用程序文件夹
+cp -R ./build/Build/Products/Release/uPic.app /Applications/
+
+# 启动应用
+open -a uPic
+```
+
+#### 🔄 保持与上游同步
+
+此 Fork 会定期从原作者仓库同步更新：
+
+```bash
+# 添加上游仓库（如果还没有）
+git remote add upstream https://github.com/gee1k/uPic.git
+
+# 同步上游更新
+git fetch upstream
+git merge upstream/master
+git push origin master
+```
+
+#### 📚 相关资源
+
+- **原作者仓库**: [gee1k/uPic](https://github.com/gee1k/uPic)
+- **此 Fork 仓库**: [graylogo/uPic](https://github.com/graylogo/uPic)
+- **详细使用指南**: [FORK_GUIDE.md](./FORK_GUIDE.md)
+
+---
 
 **👬联系： _[Telegram](https://t.me/upic_host), [Twitter](https://twitter.com/realSvend), [微博](https://weibo.com/6436660358)_**
 

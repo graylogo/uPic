@@ -4,7 +4,7 @@
   <br>
   <br>
   <p>
-    Picture and file upload tool for macOS. - A native, powerful, beautiful and simple  
+    Picture and file upload tool for macOS. - A native, powerful, beautiful and simple
   </p>
 
   <p>
@@ -16,7 +16,90 @@
   </p>
 </div>
 
------
+---
+
+## 🔧 Fork Version Info
+
+> ⚠️ **This is graylogo's Fork version, specifically adapted for macOS 26 and Xcode 26**
+
+### ✨ This Version Updates
+
+**v1.4.8-macOS26** (2024-06-06)
+
+#### Core Compatibility Upgrades
+
+1. **WCDB Database Upgrade**
+   - Upgraded WCDB from 2.1.9 to **2.1.16**
+   - Fixed Swift 6 compilation compatibility issues
+   - Fixed C++ standard library specialization errors
+
+2. **Removed Incompatible libminipng Framework**
+   - Removed pre-compiled libminipng.framework (incompatible with Swift 6)
+   - Switched to macOS native `NSBitmapImageRep` for PNG image compression
+   - Maintained original image compression functionality
+
+3. **Xcode 26 Adaptation**
+   - Updated entitlements file configuration
+   - Minimum system requirement raised to **macOS 13**
+   - Optimized Swift 6 compilation settings
+
+#### 🔄 Difference from Upstream
+
+- Based on latest code after author's v0.21.1
+- Includes all author's feature updates
+- Focused on macOS 26/Xcode 26 compatibility fixes
+
+#### ⚠️ System Requirements
+
+- **Minimum**: macOS 13 (Ventura) or higher
+- **Recommended**: macOS 14 (Sonoma) or macOS 26
+- **Xcode**: Xcode 15+ (Xcode 26 recommended)
+
+#### 📥 Installation
+
+**Method 1: Compile and Install**
+```bash
+# Clone this repository
+git clone https://github.com/graylogo/uPic.git
+cd uPic
+
+# Compile Release version
+xcodebuild -project uPic.xcodeproj -scheme "uPic(Release)" -configuration Release build
+
+# App will be generated at
+# ./build/Build/Products/Release/uPic.app
+```
+
+**Method 2: Command Line Install**
+```bash
+# After compilation, copy to Applications folder
+cp -R ./build/Build/Products/Release/uPic.app /Applications/
+
+# Launch app
+open -a uPic
+```
+
+#### 🔄 Keeping in Sync with Upstream
+
+This Fork will periodically sync updates from the author's repository:
+
+```bash
+# Add upstream repository (if not already done)
+git remote add upstream https://github.com/gee1k/uPic.git
+
+# Sync upstream updates
+git fetch upstream
+git merge upstream/master
+git push origin master
+```
+
+#### 📚 Related Resources
+
+- **Author's Repository**: [gee1k/uPic](https://github.com/gee1k/uPic)
+- **This Fork**: [graylogo/uPic](https://github.com/graylogo/uPic)
+- **Detailed Usage Guide**: [FORK_GUIDE.md](./FORK_GUIDE.md)
+
+---
 
 **👬Chat: _[Telegram](https://t.me/upic_host), [Twitter](https://twitter.com/realSvend), [Weibo](https://weibo.com/6436660358)_**
 
