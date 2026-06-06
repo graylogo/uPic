@@ -14,8 +14,7 @@
 		16068C7C22AECD9F004D39B7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16068C7B22AECD9F004D39B7 /* Constants.swift */; };
 		160CAA2522B1ED6F00D04FBD /* PreferenceKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160CAA2422B1ED6F00D04FBD /* PreferenceKey.swift */; };
 		16152F962E897552003D0768 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16068C7B22AECD9F004D39B7 /* Constants.swift */; };
-		16152F9A2E8A21A5003D0768 /* libminipng.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16152F972E8A20FE003D0768 /* libminipng.framework */; };
-		16152F9B2E8A21A5003D0768 /* libminipng.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 16152F972E8A20FE003D0768 /* libminipng.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+
 		16181F402CCF43310040D761 /* WCDBSwiftDynamic in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 9610BE8D2CCE84A300FD9F77 /* WCDBSwiftDynamic */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		161ABBDD23B1F1EB00805C5B /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161ABBDC23B1F1EB00805C5B /* DBManager.swift */; };
 		161C3BE122C483380092114F /* CustomUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161C3BE022C4831B0092114F /* CustomUploader.swift */; };
@@ -183,7 +182,6 @@
 			dstSubfolderSpec = 10;
 			files = (
 				16181F402CCF43310040D761 /* WCDBSwiftDynamic in Embed Frameworks */,
-				16152F9B2E8A21A5003D0768 /* libminipng.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -209,7 +207,6 @@
 		16068C7B22AECD9F004D39B7 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		160CAA2422B1ED6F00D04FBD /* PreferenceKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceKey.swift; sourceTree = "<group>"; };
 		1613D88625C9826B009E348A /* AutoGenStrings.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = AutoGenStrings.py; sourceTree = "<group>"; };
-		16152F972E8A20FE003D0768 /* libminipng.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = libminipng.framework; sourceTree = "<group>"; };
 		161ABBDC23B1F1EB00805C5B /* DBManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
 		161C3BE022C4831B0092114F /* CustomUploader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomUploader.swift; sourceTree = "<group>"; };
 		161C3BE222C483560092114F /* CustomHostConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomHostConfig.swift; sourceTree = "<group>"; };
@@ -370,7 +367,6 @@
 				1649393F285E2620007278DA /* CocoaLumberjackSwift in Frameworks */,
 				964198B62729A6BA0001AB97 /* SwiftyJSON in Frameworks */,
 				964198C62729A7F00001AB97 /* Kingfisher in Frameworks */,
-				16152F9A2E8A21A5003D0768 /* libminipng.framework in Frameworks */,
 				964198C42729A7EC0001AB97 /* SwiftyXMLParser in Frameworks */,
 				964198C02729A7E30001AB97 /* Alamofire in Frameworks */,
 				16539DCF278AD8700035B9DF /* SotoS3 in Frameworks */,
@@ -412,14 +408,6 @@
 				1613D88625C9826B009E348A /* AutoGenStrings.py */,
 			);
 			path = Script;
-			sourceTree = "<group>";
-		};
-		16152F982E8A20FE003D0768 /* libs */ = {
-			isa = PBXGroup;
-			children = (
-				16152F972E8A20FE003D0768 /* libminipng.framework */,
-			);
-			path = libs;
 			sourceTree = "<group>";
 		};
 		161C3BDF22C4830A0092114F /* Custom */ = {
@@ -644,7 +632,6 @@
 		16A6DC4B22AA375700813706 = {
 			isa = PBXGroup;
 			children = (
-				16152F982E8A20FE003D0768 /* libs */,
 				16A6DC5622AA375700813706 /* uPic */,
 				96B6C3EF25AD89F200B1A584 /* uPicShareExtension */,
 				F517F004DFA2ACE018535745 /* Frameworks */,
@@ -1374,7 +1361,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 38;
 				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_TEAM = W863J6W8DZ;
+				DEVELOPMENT_TEAM = 8NBY4T4XB8;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
@@ -1418,7 +1405,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 38;
 				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_TEAM = W863J6W8DZ;
+				DEVELOPMENT_TEAM = 8NBY4T4XB8;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
@@ -1457,7 +1444,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 38;
 				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_TEAM = W863J6W8DZ;
+				DEVELOPMENT_TEAM = 8NBY4T4XB8;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
@@ -1489,7 +1476,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 38;
 				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_TEAM = W863J6W8DZ;
+				DEVELOPMENT_TEAM = 8NBY4T4XB8;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
@@ -1573,7 +1560,7 @@
 			repositoryURL = "https://github.com/Tencent/wcdb";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 2.1.9;
+				minimumVersion = 2.1.16;
 			};
 		};
 		962559B72E890B9F00170641 /* XCRemoteSwiftPackageReference "LaunchAtLogin-Modern" */ = {

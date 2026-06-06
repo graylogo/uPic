@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import libminipng
 import AppKit
 
 class BaseUploaderUtil {
@@ -22,8 +21,11 @@ class BaseUploaderUtil {
            return data
         }
         
-        let repData = minipng.data2Data(data, factor)
-
+        guard let bitmap = NSBitmapImageRep(data: data) else {
+            return data
+        }
+        
+        let repData = bitmap.representation(using: .png, properties: [:])
         return repData ?? data
     }
     
